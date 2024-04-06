@@ -1,0 +1,13 @@
+<div class="node"
+  [ngClass]="{
+    'isInit' : node.isInit,
+    'isTarget': node.isTarget,
+    'isPath': node.isPath,
+    'isObstacle': node.isObstacle,
+    'isDangerous': node.isDangerous
+  }"
+>
+  <p> {{ node.position.x }} </p>
+  <p> {{ node.position.y }} </p>
+</div>
+

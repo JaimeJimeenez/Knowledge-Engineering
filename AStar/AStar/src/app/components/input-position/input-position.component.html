@@ -1,0 +1,29 @@
+<ng-container *ngIf="showError">
+  <div class="error text-danger">
+    Hay alguna posición introducida incorrecta
+  </div>
+</ng-container>
+<form [formGroup]="positionsForm" (ngSubmit)="onSubmit()">
+  <div class="input--board--settings">
+    <div class="initial">
+      <h6> Posición inicial: </h6>
+      <label for="rows">Fila:</label>
+      <input type="text" id="rows" formControlName="initial_x">
+      <label for="rows">Columna:</label>
+      <input type="text" id="rows" formControlName="initial_y">
+    </div>
+    <div class="target">
+      <h6>Posición destino: </h6>
+      <label for="columns">Fila:</label>
+      <input type="text" id="columns" formControlName="target_x">
+      <label for="rows">Columna:</label>
+      <input type="text" id="rows" formControlName="target_y">
+    </div>
+  </div>
+  <button
+    [disabled]="!positionsForm.valid" type="submit"
+    class="btn btn-primary mt-2"
+  >
+    Aceptar cambios
+  </button>
+</form>

@@ -1,0 +1,15 @@
+<h6> Ajustes del espacio de navegación </h6>
+<form [formGroup]="boardForm" (ngSubmit)="onSubmit()">
+  <div class="input--board--settings">
+    <label for="rows">Filas:</label>
+    <input type="text" id="rows" formControlName="rows">
+    <label for="columns">Columnas:</label>
+    <input type="text" id="columns" formControlName="columns">
+  </div>
+  <button
+    [disabled]="!boardForm.valid" type="submit"
+    class="btn btn-primary mt-2"
+  >
+    Ajustar tablero
+  </button>
+</form>

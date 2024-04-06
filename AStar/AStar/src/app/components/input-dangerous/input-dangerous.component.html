@@ -1,0 +1,20 @@
+<ng-container *ngIf="showError">
+  <div class="error text-danger">
+    Hay alguna posición introducida incorrecta
+  </div>
+</ng-container>
+<h6> Asignar peligros</h6>
+<form [formGroup]="dangerousForm" (ngSubmit)="onSubmit()">
+  <div class="input--board--obstacles">
+    <label for="rows">Filas:</label>
+    <input type="text" id="rows" formControlName="x">
+    <label for="columns">Columnas:</label>
+    <input type="text" id="columns" formControlName="y">
+  </div>
+  <button
+    [disabled]="!dangerousForm.valid" type="submit"
+    class="btn btn-primary mt-2"
+  >
+    Añadir peligro
+  </button>
+</form>

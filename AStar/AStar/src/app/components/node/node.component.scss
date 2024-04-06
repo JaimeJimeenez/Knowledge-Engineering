@@ -1,0 +1,37 @@
+:host {
+  display: flex;
+  width: 150px;
+  height: 150px;
+  border: 1px solid black;
+  border-radius: 4px;
+}
+
+.node {
+  display: flex;
+  width: 150px;
+  height: 150px;
+}
+
+.isInit {
+  background-color: red;
+}
+
+.isTarget {
+  background-color: green;
+}
+
+.isPath {
+  background-color: yellow;
+}
+
+.isObstacle {
+  background-color: blue;
+}
+
+.isWayPoint {
+  background-color: purple;
+}
+
+.isDangerous {
+  background-color: black;
+}

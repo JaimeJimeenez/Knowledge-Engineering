@@ -1,0 +1,44 @@
+<div class="board">
+  <div class="board--draw">
+    <ng-container *ngFor="let row of nodes; let i = index">
+      <div class="board--row">
+        <ng-container *ngFor="let node of nodes[i]">
+          <astar-node [node]="node" ></astar-node>
+        </ng-container>
+      </div>
+    </ng-container>
+  </div>
+</div>
+<div class="settings">
+  <astar-input-board (settingsBoard)="onSettingsBoard($event)"></astar-input-board>
+  <astar-input-position
+   (positionsBoard)="onPositionsBoard($event)"
+   [rowsBoard]="_rows"
+   [columnsBoard]="_columns"
+  >
+  </astar-input-position>
+  <astar-input-obstacles
+    (obstaclesBoard)="onObstaclesBoard($event)"
+  >
+  </astar-input-obstacles>
+  <astar-input-dangerous
+    (dangerousBoard)="onDangerousBoard($event)"
+    [rowsBoard]="_rows"
+    [columnsBoard]="_columns"
+  ></astar-input-dangerous>
+  <div class="board--options">
+    <div class="board--resolve">
+      <button class="btn btn-primary" (click)="resolveBoard()">Resolver</button>
+    </div>
+    <div class="board--reset">
+      <button class="btn btn-danger" (click)="resetBoard()"> Reset </button>
+    </div>
+  </div>
+</div>
+<div class="path">
+  <h6>Camino seguido</h6>
+  <ng-container *ngFor="let path of paths">
+    <p> ( {{ path.x }}, {{ path.y }} )</p>
+  </ng-container>
+</div>
+

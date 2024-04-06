@@ -1,0 +1,30 @@
+:host {
+  display: flex;
+  gap: 15px;
+}
+
+.board {
+  display: flex;
+  flex-direction: column;
+
+  &--draw {
+    display: flex;
+    width: auto;
+    flex-direction: column;
+  }
+
+  &--options {
+    display: flex;
+    margin-top: 12px;
+    justify-content: space-between;
+  }
+}
+
+.board--row {
+  display: flex;
+}
+
+.settings {
+  display: flex;
+  flex-direction: column;
+}
