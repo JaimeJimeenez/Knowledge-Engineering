@@ -1,0 +1,8 @@
+Joven,Bachillerato,2 años,Soltero
+Joven,Universitario,1 año,Soltero
+Joven,Bachillerato,3 años,Casado
+Mediana,Bachillerato,4 años,Soltero
+Mediana,Universitario,2 años,Casado
+Mediana,Universitario,3 años,Soltero
+Mayor,Postgrado,5 años,Casado
+Mayor,Postgrado,6 años,Casado

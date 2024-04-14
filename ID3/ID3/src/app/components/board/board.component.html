@@ -1,0 +1,15 @@
+<div class="board">
+  <ng-container *ngFor="let rule of rules">
+    <div class="rule">
+      {{ rule }}
+    </div>
+  </ng-container>
+</div>
+<div class="settings">
+  <id3-file-reader [title]="'Atributos'" [isExamples]="false" (contentEmitter)="onGetData($event)"></id3-file-reader>
+  <id3-file-reader [title]="'Ejemplos'" [isExamples]="true" (contentEmitter)="onGetData($event)"></id3-file-reader>
+  <button
+    class="btn btn-primary"
+    (click)="onResolve()"
+  >Resolver</button>
+</div>
